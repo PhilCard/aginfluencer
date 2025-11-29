@@ -1,9 +1,11 @@
 <?php
 
-    $host = 'localhost';
-    $user = 'root';
+    require_once '../env_loader.php';
+
+    $host = getenv('DB_HOST');
+    $user = getenv('DB_USER');
     $pass = '';
-    $dbname = 'aginfluencer_lp';
+    $dbname = getenv('DB_NAME');
 
     $conn = mysqli_connect($host, $user, $pass, $dbname);
     if (!$conn) {

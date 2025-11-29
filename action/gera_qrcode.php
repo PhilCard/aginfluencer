@@ -5,8 +5,6 @@
     require_once '../inc/database.php';
     require_once 'mailer_pedidos.php';
 
-    $api_key = 'x';
-
     function generateUUIDv4() {
         $data = random_bytes(16);
         $data[6] = chr(ord($data[6]) & 0x0f | 0x40);
@@ -119,7 +117,7 @@
                     ],
                 ]),
                 CURLOPT_HTTPHEADER => [
-                    'Authorization: ' . $apiKey,
+                    'Authorization: ' . getenv('API_KEY_OPENPIX'),
                     'Content-Type: application/json'
                 ],
             ]);

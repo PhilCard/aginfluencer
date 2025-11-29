@@ -1,5 +1,7 @@
  <?php
 
+    require_once '../env_loader.php';
+
     header('Content-Type: application/json');
  
     function pegaPerfilInsta($version, $user_key, $instagram)
@@ -19,7 +21,7 @@
             CURLOPT_CUSTOMREQUEST => 'GET',
             CURLOPT_HTTPHEADER => array(
                 'Accept: application/json',
-                'x-access-key:'//< ---- chave api key 
+                'x-access-key:'.getenv('API_KEY_HIKER')
             ),
         ));
 
