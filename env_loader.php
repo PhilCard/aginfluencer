@@ -16,5 +16,15 @@
             $_SERVER[$name] = $value;
         }
     }
+
+    // Carregar .env
     loadEnv(__DIR__ . '/.env');
+
+    // Usar variáveis
+    $db_user = getenv('DB_USER');
+    $api_key = $_ENV['API_KEY_OPENPIX'];
+
+    echo "Usuário DB: $api_key";
+
+    //ps subir junto com o database
 ?>

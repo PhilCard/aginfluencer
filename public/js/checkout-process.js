@@ -80,7 +80,7 @@ $("#pagamento_checkout").on("click", async function (e) {
 
         if (resultado.includes("aprovado")) {
             mostrarSucesso('O pagamento foi concluído com sucesso. Verifique seu email para acompanhar o status de entrega do serviço escolhido');
-            //await liberaServico(data.charge.correlationID);
+            await liberaServico(data.correlationID);
         }
         else if(resultado.includes("Erro")) 
         {
@@ -146,11 +146,11 @@ function validaPagamento(correlationID) {
 
 
 //liberação do servico escolhido
-/*
+
 async function liberaServico(correlationID) {
     try {
         const resp = await $.ajax({
-            url: '../action/libera_servico.php',
+            url: '../action/process_pag.php',
             type: "POST",
             dataType: "json",
             data: { id: correlationID }
@@ -160,7 +160,7 @@ async function liberaServico(correlationID) {
         console.error("Erro ao liberar serviço:", err);
     }
 }
-*/
+
 
 function mostrarSucesso(mensagem = 'A operação foi concluída com êxito.') {
     document.getElementById("msgSucesso").textContent = mensagem;

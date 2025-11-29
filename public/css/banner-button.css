@@ -1,0 +1,26 @@
+.banner56 {
+    width: 100%;
+    font-size: 14px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+    padding: 11px 15px;
+    color: #fff;
+    background: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+}
+
+.button190 {
+    padding: 3px 10px;
+    background-color: #ffffff;
+    color: #3f3f3f;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transition: all .5s ease;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+}
