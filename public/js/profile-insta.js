@@ -1,5 +1,3 @@
-//verifica perfil do instagram
-
 function sanitizeUrl(str) {
     if (!str) return null;
 
@@ -46,7 +44,7 @@ $(document).ready(function() {
         }
 
         $.ajax({
-            url: '../action/api_profile_insta.php',
+            url: '../../app/controllers/instapi.php',
             type: "GET",
             dataType: "json",
             data: dados,

@@ -1,10 +1,10 @@
 <?php
 
-    require_once '../env_loader.php';
-
+    require_once 'env_loader.php';
+    
     $host = getenv('DB_HOST');
     $user = getenv('DB_USER');
-    $pass = '';
+    $pass = getenv('DB_PASS');
     $dbname = getenv('DB_NAME');
 
     $conn = mysqli_connect($host, $user, $pass, $dbname);
