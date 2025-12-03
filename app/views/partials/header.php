@@ -14,3 +14,6 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
+    <title> Agência do Influencer - Aumente o seu Engajamento | Engajamento Real e Barato | Menor preço </title>
+    <!--==Fav-icon===============================-->
+    <link rel="shortcut icon" type="image/x-icon" href="<?=asset('images/favicon ag influencer.png')?>">

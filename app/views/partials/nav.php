@@ -7,7 +7,7 @@
     </div>
     <div class="nav">
         <!--logo-------->
-        <a class="navbar-brand" href="#"><img width="170" class="site-logo-white"
+        <a class="navbar-brand" href="/"><img width="170" class="site-logo-white"
                 src="<?= asset('images/ligo agencia influencer 1.png')?>" alt="Logo Aqui"></a>
         <!--menu-btn---->
         <input type="checkbox" class="menu-btn" id="menu-btn">

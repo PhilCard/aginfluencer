@@ -1,10 +1,7 @@
 <?php require VIEW_PATH . 'partials/header.php'; ?>
 <?php require_once './app/models/ExibePlanos.php'; ?>
-<title> Agência do Influencer - Aumente o seu Engajamento | Engajamento Real e Barato | Menor preço </title>
 <link rel="stylesheet" type="text/css" href="<?= asset('css/style_app.css') ?>">
 <link rel="stylesheet" type="text/css" href="<?= asset('css/estilo_principal.css') ?>">
-<!--==Fav-icon===============================-->
-<link rel="shortcut icon" type="image/x-icon" href="<?= asset('images/favicon ag influencer.png') ?>">
 <!--==JAVASCRIPT=============================-->
 <script src="<?= asset('js/jquery.js') ?>" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="<?= asset('js/promo-countdown.js') ?>"></script>

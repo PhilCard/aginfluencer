@@ -44,17 +44,17 @@ $(document).ready(function() {
         }
 
         $.ajax({
-            url: '../../app/controllers/instapi.php',
+            url: './app/controllers/instapi.php',
             type: "GET",
             dataType: "json",
             data: dados,
             success: function (data) {
-                //console.log(data);
+                console.log(data);
                 if (data.user) {
                     $('#form-container').hide();
                         $('#profile-container').show();
                         $("#username").text(data.user.username);
-                        $("#profile-picture").attr("src","proxy.php?url="+ encodeURIComponent(data.user.profile_pic_url));
+                        $("#profile-picture").attr("src","./inc/proxy.php?url="+ encodeURIComponent(data.user.profile_pic_url));
                         $("#followers").text(data.user.follower_count);
                 } 
                 else if(data.username) 
@@ -62,7 +62,7 @@ $(document).ready(function() {
                     $('#form-container').hide();
                     $('#profile-container').show();
                     $("#username").text(data.username);
-                    $("#profile-picture").attr("src","proxy.php?url="+ encodeURIComponent(data.profile_pic_url));
+                    $("#profile-picture").attr("src","./inc/proxy.php?url="+ encodeURIComponent(data.profile_pic_url));
                     $("#followers").text(data.follower_count);
                 }
                 else

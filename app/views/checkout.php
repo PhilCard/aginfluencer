@@ -53,7 +53,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg ">
             <a class="navbar-brand" href="../">
-                <img class="site-logo" src="../assets/images/ligo agencia influencer 1.png" alt="agInfluencer">
+                <img class="site-logo" src="<?= asset('images/ligo agencia influencer 1.png') ?>" alt="agInfluencer">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span><i class="fa-solid fa-bars"></i></span>
@@ -284,7 +284,7 @@
                                                 <input type="hidden" id="json-products" value='<?= htmlspecialchars($jsonPacotes, ENT_QUOTES, "UTF-8"); ?>'>
                                             </div>
                                             <div class="avaliacao-seletor" bis_skin_checked="1">
-                                                <img class="lazy loaded" decoding="async" src="../assets/images/45-estrelas.jpg" data-src="../assets/images/45-estrelas.jpg" data-was-processed="true">
+                                                <img class="lazy loaded" decoding="async" src="<?= asset('images/45-estrelas.jpg') ?>" data-src="<?= asset('images/45-estrelas.jpg') ?>" data-was-processed="true">
                                                 <span style="font-size: 12px;"><b>4.7</b> (63327 avaliações)</span>
                                             </div>
                                         </div>
@@ -317,7 +317,7 @@
                                 </div>
                                 <!--==Até aqui==-->
                                 <a href="../" target="_blank" rel="noopener noreferrer">
-                                    <img src="../assets/images/checkoutsidesz.webp" alt="Compra Segura" width="auto" height="auto" style="margin-top: 5%;">
+                                    <img src="<?= asset('images/checkoutsidesz.webp') ?>" alt="Compra Segura" width="auto" height="auto" style="margin-top: 5%;">
                                 </a>
                             </div>
                         </div>

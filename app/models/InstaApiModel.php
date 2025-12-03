@@ -21,6 +21,8 @@
                 'Accept: application/json',
                 'x-access-key:'.getenv('HIKER_API')
             ),
+            CURLOPT_SSL_VERIFYPEER => false, //retirar essas duas linhas na prod
+            CURLOPT_SSL_VERIFYHOST => 0,
         ));
 
         $response = curl_exec($curl);
