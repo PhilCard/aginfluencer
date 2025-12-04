@@ -1,5 +1,7 @@
 <?php
 
+    require __DIR__ . '/../../inc/env_loader.php';
+
     function verificaCodService($social_media, $srvc, $plan)
     {
 

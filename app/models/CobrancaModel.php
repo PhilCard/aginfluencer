@@ -1,5 +1,7 @@
 <?php
 
+    require __DIR__ . '/../../inc/env_loader.php';
+
     function generateUUIDv4()
     {
         $data = random_bytes(16);
@@ -8,6 +10,16 @@
         return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
     }
 
+
+    function validaForm() {
+        foreach($_POST as $input) {
+            if(empty($input)) {
+               return false;
+            }
+        }
+        return true;
+    }
+    
 
     function salvaDadosCliente($conn, $correlationID, $link_post, $rede_social, $servico, $plano, $qtde, $price)
     {
@@ -31,7 +43,7 @@
     }
 
 
-    function geraCobrançaPix($correlationID, $value, $whats)
+    function geraCobrançaPix($correlationID, $price, $whats)
     {
         $curl = curl_init();
 
@@ -46,7 +58,7 @@
             CURLOPT_CUSTOMREQUEST => 'POST',
             CURLOPT_POSTFIELDS => json_encode([
                 "correlationID" => $correlationID,
-                "value" => $value,
+                "value" => $price,
                 "expiresIn" => 900,
                 "customer" => [
                     "name" => "user",
